@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+            background: #f0f0f0;
+        }
+
+        .marquee-content {
+            display: flex;
+            align-items: center;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .logo {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            flex: 0 0 auto;
+        }
+
+        .logo-wrapper img {
+            margin-right: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="relative">
+        <!-- Navbar -->
+        <nav class="relative top-0 left-0 w-full z-10 bg-transparent pr-8">
+            <div class="flex justify-between items-center">
+                <div class="logo">
+                    <!-- Your Logo -->
+                    <img src="white_logo.png" alt="Logo" class="w-72" />
+                </div>
+                <ul class="hidden md:flex space-x-6 text-white font-semibold">
+                    <li><a href="/" class="hover:text-primary cursor-pointer transition duration-300">Home</a></li>
+                    <li><a href="/about" class="hover:text-primary cursor-pointer transition duration-300">About</a>
+                    </li>
+                    <li><a href="#" class="hover:text-primary cursor-pointer transition duration-300">Services</a></li>
+                    <li><a href="#" class="hover:text-primary cursor-pointer transition duration-300">Portfolio</a></li>
+                    <li><a href="#" class="hover:text-primary cursor-pointer transition duration-300">Contact</a></li>
+                </ul>
+                <div class="space-x-4 items-center pr-5">
+                    <!-- Social Icons -->
+                    <a href="#"><i class="fab fa-facebook text-white"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-white"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp text-white"></i></a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Background Video -->
+        <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <source src="banner222.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Overlay Text -->
+        <div class="relative flex flex-col items-center justify-center h-screen text-center px-4">
+            <h1 class="text-5xl md:text-6xl font-bold text-white leading-tight">
+                Transforming Brilliant Ideas into
+                <span class="text-blue-500">Your Brand’s Success.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-white mt-4">
+                At Izam Devs, we turn your digital vision into impactful reality with cutting-edge technology and
+                creative expertise. Partner with us to elevate your brand and achieve remarkable results online.
+            </p>
+            <div class="mt-8 space-x-4">
+                <button class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition">Hire
+                    Us</button>
+                <button
+                    class="border border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition">See
+                    More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logo Carousel -->
+    <div class="bg-white py-8">
+        <h2 class="text-3xl font-bold text-center mb-6">The world's leading brands are powered by <span
+                class="text-indigo-500">YourBrand</span></h2>
+        <div class="marquee-container mt-8">
+            <div class="marquee-content">
+                <!-- Logo Wrapper for Repeating Logos -->
+                <div class="logo-wrapper">
+                    <img src="1.png" alt="Yamaha" class="h-16 logo">
+                    <img src="2.png" alt="Nissan" class="h-16 logo">
+                    <img src="3.png" alt="Great Wall" class="h-16 logo">
+                    <img src="4.png" alt="BYD" class="h-16 logo">
+                    <img src="5.png" alt="Close Brothers"
+                        class="h-16 logo">
+                    <img src="6.png" alt="Doordash" class="h-16 logo">
+                    <img src="7.png" alt="Peterbilt" class="h-16 logo">
+                    <!-- Repeat logos for continuous scrolling -->
+                    <img src="8.png" alt="Yamaha" class="h-16 logo">
+                    <img src="9.png" alt="Nissan" class="h-16 logo">
+                    <img src="10.png" alt="Nissan" class="h-16 logo">
+                    <img src="11.png" alt="Nissan" class="h-16 logo">
+                    <img src="12.png" alt="Nissan" class="h-16 logo">
+                    <img src="13.png" alt="Nissan" class="h-16 logo">
+                    <img src="14.png" alt="Nissan" class="h-16 logo">
+                </div>
+                <!-- Repeat logo wrapper to ensure smooth scrolling -->
+                <div class="logo-wrapper">
+                    <img src="1.png" alt="Yamaha" class="h-16 logo">
+                    <img src="2.png" alt="Nissan" class="h-16 logo">
+                    <img src="3.png" alt="Great Wall" class="h-16 logo">
+                    <img src="4.png" alt="BYD" class="h-16 logo">
+                    <img src="5.png" alt="Close Brothers"
+                        class="h-16 logo">
+                    <img src="6.png" alt="Doordash" class="h-16 logo">
+                    <img src="7.png" alt="Peterbilt" class="h-16 logo">
+                    <!-- Repeat logos for continuous scrolling -->
+                    <img src="8.png" alt="Yamaha" class="h-16 logo">
+                    <img src="9.png" alt="Nissan" class="h-16 logo">
+                    <img src="10.png" alt="Nissan" class="h-16 logo">
+                    <img src="11.png" alt="Nissan" class="h-16 logo">
+                    <img src="12.png" alt="Nissan" class="h-16 logo">
+                    <img src="13.png" alt="Nissan" class="h-16 logo">
+                    <img src="14.png" alt="Nissan" class="h-16 logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="text-center py-12">
+        <!-- Heading -->
+        <h2 class="text-blue-600 font-semibold">Premium Services</h2>
+        <h1 class="text-4xl font-bold mt-2">
+            The Best Services
+        </h1>
+        <p class="text-2xl mt-1">
+            Determine The <span class="text-blue-600 font-semibold">Services</span> You Need
+        </p>
+
+        <!-- Services Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 max-w-6xl mx-auto px-6 md:px-0">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-blue-900 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 18l6-6m0 0l-6-6m6 6H3" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Web Development</h3>
+                <p class="text-gray-600">
+                    At IZAM DEVS, we work with you to get exactly what you need and build websites that are easy and fun
+                    for your users. Plus, we’re always here to keep things running smoothly.
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-green-500 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 18l6-6m0 0l-6-6m6 6H3" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Odoo Development</h3>
+                <p class="text-gray-600">
+                    Unlock your business’s potential with our Odoo development services. We customize Odoo solutions to
+                    fit your needs, making your operations smoother and more efficient.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-yellow-500 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 18l6-6m0 0l-6-6m6 6H3" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Web Hosting</h3>
+                <p class="text-gray-600">
+                    A strong online presence is key to success. IZAM DEVS offers top-tier cloud and web hosting to keep
+                    your site and apps running smoothly and securely.
+                </p>
+            </div>
+        </div>
+
+        <!-- Services Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 max-w-6xl mx-auto px-6 md:px-0">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-blue-900 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 18l6-6m0 0l-6-6m6 6H3" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Web Development</h3>
+                <p class="text-gray-600">
+                    At IZAM DEVS, we work with you to get exactly what you need and build websites that are easy and fun
+                    for your users. Plus, we’re always here to keep things running smoothly.
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-green-500 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 18l6-6m0 0l-6-6m6 6H3" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Odoo Development</h3>
+                <p class="text-gray-600">
+                    Unlock your business’s potential with our Odoo development services. We customize Odoo solutions to
+                    fit your needs, making your operations smoother and more efficient.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-yellow-500 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 18l6-6m0 0l-6-6m6 6H3" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Web Hosting</h3>
+                <p class="text-gray-600">
+                    A strong online presence is key to success. IZAM DEVS offers top-tier cloud and web hosting to keep
+                    your site and apps running smoothly and securely.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center px-6 py-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="flex flex-col justify-center">
+            <div>
+                <img class="rounded-lg w-full h-full md:object-cover" src="about.jpg" alt="">
+            </div>
+            <div class="space-y-3 flex flex-col md:flex-row md:space-x-5 md:space-y-0">
+                <div class="bg-white rounded-lg shadow-xl p-6">
+                    <h3 class="text-lg font-bold mb-2"><span class="text-blue-600 font-semibold">10</span>+</h3>
+                    <p class="text-gray-600 font-bold">
+                        Team Members
+                    </p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-bold mb-2"><span class="text-blue-600 font-semibold">400</span>+</h3>
+                    <p class="text-gray-600 font-bold">
+                        Clients Reviews
+                    </p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-bold mb-2"><span class="text-blue-600 font-semibold">50</span>+</h3>
+                    <p class="text-gray-600 font-bold">
+                        Completed Projects
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="text-start mt-8 flex flex-col justify-center">
+            <h2 class="text-blue-600 font-semibold">About Us</h2>
+            <h1 class="text-4xl font-bold mt-2">
+                Why <span class="text-blue-600 font-bold">Choose </span>Us
+            </h1>
+            <span class="text-md mt-8">
+                Choosing IZAM DEVS means teaming up with a partner focused on your success. Our track record of
+                excellence, passion for innovation, and dedication to your unique needs set us apart. Join our satisfied
+                clients and discover what sets us apart from the rest.
+            </span>
+            <button class="bg-blue-500 hover:bg-blue-600 max-w-44 py-3 rounded-lg text-white font-semibold mt-8">Join
+                Us</button>
+        </div>
+    </section>
+
+    <section class="relative h-screen flex flex-col justify-center bg-gray-100 overflow-hidden">
+        <!-- Background Video -->
+        <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <source src="banner222.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Content -->
+        <div
+            class="container mx-auto px-4 md:px-24 relative z-10 grid grid-cols-1 md:grid-cols-2 items-center h-full overflow-y-auto">
+            <!-- Text Section on the Left -->
+            <div class="p-6 md:p-12">
+                <h1 class="text-2xl md:text-4xl font-bold text-white leading-tight text-center md:text-left">
+                    We Have Done Lot’s Of <span class="text-blue-500">Project’s</span>
+                </h1>
+                <p class="mt-4 text-gray-300 text-center md:text-left">
+                    Explore Our Projects to see how we bring ideas to life with innovative solutions and meticulous
+                    attention to detail. From concept to completion, our portfolio showcases our commitment to
+                    excellence and our ability to deliver exceptional results tailored to each client’s needs.
+                </p>
+                <div class="flex justify-center md:justify-start">
+                    <button
+                        class="mt-6 bg-transparent border border-white hover:border-blue-600 text-white px-8 py-2 rounded-lg hover:bg-blue-600">
+                        See more
+                    </button>
+                </div>
+            </div>
+
+            <!-- Image Grid on the Right (Adjusts for mobile screens) -->
+            <div class="w-full h-auto mt-6 md:mt-0">
+                <div class="grid grid-cols-3 grid-rows-2 gap-4 p-4 max-h-[75vh] overflow-auto">
+                    <div class="col-span-1">
+                        <img src="about.jpg" alt="Image 1" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div class="col-span-1">
+                        <img src="about.jpg" alt="Image 2" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div class="col-span-1">
+                        <img src="about.jpg" alt="Image 3" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div class="col-span-2">
+                        <img src="about.jpg" alt="Image 4" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div class="col-span-1">
+                        <img src="about.jpg" alt="Image 5" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Video After the Image Grid -->
+        <div class="absolute bottom-0 left-0 w-full h-1/4 z-10">
+            <video autoplay muted loop class="w-full h-full object-cover">
+                <source src="second-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <!-- Section Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-blue-600 font-semibold">Our Team</h2>
+                <h1 class="text-4xl font-bold mt-2">
+                    Experience & Our Professionals <span class="text-blue-600 font-bold">Team </span>
+                </h1>
+            </div>
+
+            <!-- Team Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img class="w-32 h-32 mx-auto rounded-full object-cover" src="Ubaid_pic.png" alt="Team Member 1">
+                    <h3 class="mt-4 text-xl font-semibold text-gray-800">Muhammad Irzam</h3>
+                    <p class="text-gray-500">Web Developer / CEO</p>
+                    <p class="mt-4 text-gray-600">Our CEO, M.Irzam, leads with vision and passion, steering IZAM DEVS
+                        towards innovation and excellence.</p>
+                    <div class="flex justify-center mt-4 space-x-4">
+                        <a href="#" class="text-blue-600 hover:text-blue-800">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-pink-600 hover:text-pink-800">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img class="w-32 h-32 mx-auto rounded-full object-cover" src="team2.jpg" alt="Team Member 2">
+                    <h3 class="mt-4 text-xl font-semibold text-gray-800">Ali Hashmi</h3>
+                    <p class="text-gray-500">Backend Developer / COO</p>
+                    <p class="mt-4 text-gray-600">Our COO, Ali, streamlines operations to ensure peak efficiency and
+                        exceptional service delivery.</p>
+                    <div class="flex justify-center mt-4 space-x-4">
+                        <a href="#" class="text-blue-600 hover:text-blue-800">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-pink-600 hover:text-pink-800">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img class="w-32 h-32 mx-auto rounded-full object-cover" src="team3.jpg" alt="Team Member 3">
+                    <h3 class="mt-4 text-xl font-semibold text-gray-800">Mehroze Javed</h3>
+                    <p class="text-gray-500">SEO/SEM / Project Manager</p>
+                    <p class="mt-4 text-gray-600">Our Project Manager, Mehroze, expertly oversees projects, ensuring
+                        timely delivery and outstanding results.</p>
+                    <div class="flex justify-center mt-4 space-x-4">
+                        <a href="#" class="text-blue-600 hover:text-blue-800">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-pink-600 hover:text-pink-800">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member Card 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img class="w-32 h-32 mx-auto rounded-full object-cover" src="team4.jpg" alt="Team Member 4">
+                    <h3 class="mt-4 text-xl font-semibold text-gray-800">Zaryab Mughal</h3>
+                    <p class="text-gray-500">Frontend Developer / HR Manager</p>
+                    <p class="mt-4 text-gray-600">Our HR Manager, Zaryab, fosters a dynamic workplace, attracting top
+                        talent and nurturing team growth.</p>
+                    <div class="flex justify-center mt-4 space-x-4">
+                        <a href="#" class="text-blue-600 hover:text-blue-800">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-pink-600 hover:text-pink-800">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center md:space-y-0 w-full">
+    
+                <!-- Logo Section -->
+                <div class="flex items-center justify-center md:justify-start">
+                    <img src="white_logo.png" alt="Company Logo" class="w-48"> <!-- Adjusted width -->
+                </div>
+    
+                
+    
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4 justify-center mt-4 md:mt-0 md:mr-8">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+    
+            <!-- Copyright Text -->
+            <div class="text-center mt-8">
+                <p>&copy; 2024 IZAM DEVS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+
+</body>
+
+</html>
