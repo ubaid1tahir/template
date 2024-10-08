@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         .marquee-container {
             overflow: hidden;
             white-space: nowrap;
@@ -59,13 +62,13 @@
                 </div>
                 <ul class="hidden md:flex space-x-6 text-white font-semibold">
                     <li><a href="/" class="hover:text-primary cursor-pointer transition duration-300">Home</a></li>
-                    <li><a href="/about" class="hover:text-primary cursor-pointer transition duration-300">About</a>
+                    <li><a href="#about" class="hover:text-primary cursor-pointer transition duration-300">About</a>
                     </li>
-                    <li><a href="#" class="hover:text-primary cursor-pointer transition duration-300">Services</a></li>
-                    <li><a href="#" class="hover:text-primary cursor-pointer transition duration-300">Portfolio</a></li>
-                    <li><a href="#" class="hover:text-primary cursor-pointer transition duration-300">Contact</a></li>
+                    <li><a href="#services" class="hover:text-primary cursor-pointer transition duration-300">Services</a></li>
+                    <li><a href="#portfolio" class="hover:text-primary cursor-pointer transition duration-300">Portfolio</a></li>
+                    <li><a href="#contact" class="hover:text-primary cursor-pointer transition duration-300">Contact</a></li>
                 </ul>
-                <div class="space-x-4 items-center pr-5">
+                <div class="md:space-x-4 space-x-2 items-center pr-5">
                     <!-- Social Icons -->
                     <a href="#"><i class="fab fa-facebook text-white"></i></a>
                     <a href="#"><i class="fab fa-instagram text-white"></i></a>
@@ -82,11 +85,11 @@
 
         <!-- Overlay Text -->
         <div class="relative flex flex-col items-center justify-center h-screen text-center px-4">
-            <h1 class="text-5xl md:text-6xl font-bold text-white leading-tight">
+            <h1 class="text-3xl md:text-6xl font-bold text-white leading-tight">
                 Transforming Brilliant Ideas into
                 <span class="text-blue-500">Your Brand’s Success.</span>
             </h1>
-            <p class="text-lg md:text-xl text-white mt-4">
+            <p class="text-md md:text-xl text-white mt-4">
                 At Izam Devs, we turn your digital vision into impactful reality with cutting-edge technology and
                 creative expertise. Partner with us to elevate your brand and achieve remarkable results online.
             </p>
@@ -102,59 +105,59 @@
 
     <!-- Logo Carousel -->
     <div class="bg-white py-8">
-        <h2 class="text-3xl font-bold text-center mb-6">The world's leading brands are powered by <span
+        <h2 class="text-xl md:text-3xl font-bold text-center mb-6">The world's leading brands are powered by <span
                 class="text-indigo-500">YourBrand</span></h2>
         <div class="marquee-container mt-8">
             <div class="marquee-content">
                 <!-- Logo Wrapper for Repeating Logos -->
                 <div class="logo-wrapper">
-                    <img src="1.png" alt="Yamaha" class="h-16 logo">
-                    <img src="2.png" alt="Nissan" class="h-16 logo">
-                    <img src="3.png" alt="Great Wall" class="h-16 logo">
-                    <img src="4.png" alt="BYD" class="h-16 logo">
+                    <img src="1.png" alt="Yamaha" class="md:h-16 h-12 logo">
+                    <img src="2.png" alt="Nissan" class="md:h-16 h-12 logo">
+                    <img src="3.png" alt="Great Wall" class="md:h-16 h-12 logo">
+                    <img src="4.png" alt="BYD" class="md:h-16 h-12 logo">
                     <img src="5.png" alt="Close Brothers"
-                        class="h-16 logo">
-                    <img src="6.png" alt="Doordash" class="h-16 logo">
-                    <img src="7.png" alt="Peterbilt" class="h-16 logo">
+                        class="md:h-16 h-12 logo">
+                    <img src="6.png" alt="Doordash" class="md:h-16 h-12 logo">
+                    <img src="7.png" alt="Peterbilt" class="md:h-16 h-12 logo">
                     <!-- Repeat logos for continuous scrolling -->
-                    <img src="8.png" alt="Yamaha" class="h-16 logo">
-                    <img src="9.png" alt="Nissan" class="h-16 logo">
-                    <img src="10.png" alt="Nissan" class="h-16 logo">
-                    <img src="11.png" alt="Nissan" class="h-16 logo">
-                    <img src="12.png" alt="Nissan" class="h-16 logo">
-                    <img src="13.png" alt="Nissan" class="h-16 logo">
-                    <img src="14.png" alt="Nissan" class="h-16 logo">
+                    <img src="8.png" alt="Yamaha" class="md:h-16 h-12 logo">
+                    <img src="9.png" alt="Nissan" class="md:h-16 h-12 logo">
+                    <img src="10.png" alt="Nissan" class="md:h-16 h-12 logo">
+                    <img src="11.png" alt="Nissan" class="md:h-16 h-12 logo">
+                    <img src="12.png" alt="Nissan" class="md:h-16 h-12 logo">
+                    <img src="13.png" alt="Nissan" class="md:h-16 h-12 logo">
+                    <img src="14.png" alt="Nissan" class="md:h-16 h-12 logo">
                 </div>
                 <!-- Repeat logo wrapper to ensure smooth scrolling -->
                 <div class="logo-wrapper">
-                    <img src="1.png" alt="Yamaha" class="h-16 logo">
-                    <img src="2.png" alt="Nissan" class="h-16 logo">
-                    <img src="3.png" alt="Great Wall" class="h-16 logo">
-                    <img src="4.png" alt="BYD" class="h-16 logo">
+                    <img src="1.png" alt="Yamaha" class="md:h-16 h-12 logo">
+                    <img src="2.png" alt="Nissan" class="md:h-16 h-12 logo">
+                    <img src="3.png" alt="Great Wall" class="md:h-16 h-12 logo">
+                    <img src="4.png" alt="BYD" class="md:h-16 h-12 logo">
                     <img src="5.png" alt="Close Brothers"
-                        class="h-16 logo">
-                    <img src="6.png" alt="Doordash" class="h-16 logo">
-                    <img src="7.png" alt="Peterbilt" class="h-16 logo">
+                        class="md:h-16 h-12 logo">
+                    <img src="6.png" alt="Doordash" class="md:h-16 h-12 logo">
+                    <img src="7.png" alt="Peterbilt" class="md:h-16 h-12 logo">
                     <!-- Repeat logos for continuous scrolling -->
-                    <img src="8.png" alt="Yamaha" class="h-16 logo">
-                    <img src="9.png" alt="Nissan" class="h-16 logo">
-                    <img src="10.png" alt="Nissan" class="h-16 logo">
-                    <img src="11.png" alt="Nissan" class="h-16 logo">
-                    <img src="12.png" alt="Nissan" class="h-16 logo">
-                    <img src="13.png" alt="Nissan" class="h-16 logo">
-                    <img src="14.png" alt="Nissan" class="h-16 logo">
+                    <img src="8.png" alt="Yamaha" class="md:h-16 h-12 logo">
+                    <img src="9.png" alt="Nissan" class="md:h-16 h-12 logo">
+                    <img src="10.png" alt="Nissan" class="md:h-16 h-12 logo">
+                    <img src="11.png" alt="Nissan" class="md:h-16 h-12 logo">
+                    <img src="12.png" alt="Nissan" class="md:h-16 h-12 logo">
+                    <img src="13.png" alt="Nissan" class="md:h-16 h-12 logo">
+                    <img src="14.png" alt="Nissan" class="md:h-16 h-12 logo">
                 </div>
             </div>
         </div>
     </div>
 
-    <section class="text-center py-12">
+    <section id="services" class="text-center py-12">
         <!-- Heading -->
         <h2 class="text-blue-600 font-semibold">Premium Services</h2>
-        <h1 class="text-4xl font-bold mt-2">
+        <h1 class="text-xl md:text-4xl font-bold mt-2">
             The Best Services
         </h1>
-        <p class="text-2xl mt-1">
+        <p class="text-lg md:text-2xl mt-1">
             Determine The <span class="text-blue-600 font-semibold">Services</span> You Need
         </p>
 
@@ -273,7 +276,7 @@
         </div>
     </section>
 
-    <section class="text-center px-6 py-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+    <section id="about" class="text-center px-6 py-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         <div class="flex flex-col justify-center">
             <div>
                 <img class="rounded-lg w-full h-full md:object-cover" src="about.jpg" alt="">
@@ -314,7 +317,7 @@
         </div>
     </section>
 
-    <section class="relative h-screen flex flex-col justify-center bg-gray-100 overflow-hidden">
+    <section id="portfolio" class="relative h-screen flex flex-col justify-center bg-gray-100 overflow-hidden">
         <!-- Background Video -->
         <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
             <source src="banner222.mp4" type="video/mp4">
@@ -378,7 +381,7 @@
             <!-- Section Title -->
             <div class="text-center mb-12">
                 <h2 class="text-blue-600 font-semibold">Our Team</h2>
-                <h1 class="text-4xl font-bold mt-2">
+                <h1 class="text-xl md:text-4xl font-bold mt-2">
                     Experience & Our Professionals <span class="text-blue-600 font-bold">Team </span>
                 </h1>
             </div>
@@ -478,7 +481,7 @@
     
             <!-- Copyright Text -->
             <div class="text-center mt-8">
-                <p>&copy; 2024 IZAM DEVS. All rights reserved.</p>
+                <p class="text-sm">&copy; 2024 AspireSoft. All rights reserved.</p>
             </div>
         </div>
     </footer>
