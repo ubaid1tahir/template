@@ -11,6 +11,7 @@
         html {
             scroll-behavior: smooth;
         }
+
         .marquee-container {
             overflow: hidden;
             white-space: nowrap;
@@ -60,21 +61,44 @@
                     <!-- Your Logo -->
                     <img src="white_logo.png" alt="Logo" class="md:w-72 w-48" />
                 </div>
+
+                <!-- Hamburger Icon (Visible on Mobile) -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop Menu -->
                 <ul class="hidden md:flex space-x-6 text-white font-semibold">
                     <li><a href="/" class="hover:text-primary cursor-pointer transition duration-300">Home</a></li>
                     <li><a href="#about" class="hover:text-primary cursor-pointer transition duration-300">About</a>
                     </li>
-                    <li><a href="#services" class="hover:text-primary cursor-pointer transition duration-300">Services</a></li>
-                    <li><a href="#portfolio" class="hover:text-primary cursor-pointer transition duration-300">Portfolio</a></li>
-                    <li><a href="#contact" class="hover:text-primary cursor-pointer transition duration-300">Contact</a></li>
+                    <li><a href="#services"
+                            class="hover:text-primary cursor-pointer transition duration-300">Services</a></li>
+                    <li><a href="#portfolio"
+                            class="hover:text-primary cursor-pointer transition duration-300">Portfolio</a></li>
+                    <li><a href="#contact" class="hover:text-primary cursor-pointer transition duration-300">Contact</a>
+                    </li>
                 </ul>
-                <div class="md:space-x-4 space-x-2 flex items-center pr-5">
-                    <!-- Social Icons -->
+
+                <!-- Social Icons -->
+                <div class="md:space-x-4 space-x-2 hidden md:flex items-center pr-5">
                     <a href="#"><i class="fab fa-facebook text-white"></i></a>
                     <a href="#"><i class="fab fa-instagram text-white"></i></a>
                     <a href="#"><i class="fab fa-whatsapp text-white"></i></a>
                 </div>
             </div>
+
+            <!-- Mobile Sidebar Menu (Hidden by default) -->
+            <ul id="mobile-menu"
+                class="fixed inset-y-0 left-0 w-64 bg-gray-800 p-5 transform -translate-x-full transition-transform duration-300 md:hidden">
+                <li class="mb-2"><a href="/" class="text-white hover:text-primary">Home</a></li>
+                <li class="mb-2"><a href="#about" class="text-white hover:text-primary">About</a></li>
+                <li class="mb-2"><a href="#services" class="text-white hover:text-primary">Services</a></li>
+                <li class="mb-2"><a href="#portfolio" class="text-white hover:text-primary">Portfolio</a></li>
+                <li class="mb-2"><a href="#contact" class="text-white hover:text-primary">Contact</a></li>
+            </ul>
         </nav>
 
         <!-- Background Video -->
@@ -84,7 +108,8 @@
         </video>
 
         <!-- Overlay Text -->
-        <div class="relative flex flex-col items-center md:justify-center pb-10 md:pt-0 mt-10 md:mt-0 md:h-screen text-center px-4">
+        <div
+            class="relative flex flex-col items-center md:justify-center pb-10 md:pt-0 mt-10 md:mt-0 md:h-screen text-center px-4">
             <h1 class="text-3xl md:text-6xl font-bold text-white leading-tight">
                 Transforming Brilliant Ideas into
                 <span class="text-blue-500">Your Brand’s Success.</span>
@@ -115,8 +140,7 @@
                     <img src="2.png" alt="Nissan" class="md:h-16 h-12 logo">
                     <img src="3.png" alt="Great Wall" class="md:h-16 h-12 logo">
                     <img src="4.png" alt="BYD" class="md:h-16 h-12 logo">
-                    <img src="5.png" alt="Close Brothers"
-                        class="md:h-16 h-12 logo">
+                    <img src="5.png" alt="Close Brothers" class="md:h-16 h-12 logo">
                     <img src="6.png" alt="Doordash" class="md:h-16 h-12 logo">
                     <img src="7.png" alt="Peterbilt" class="md:h-16 h-12 logo">
                     <!-- Repeat logos for continuous scrolling -->
@@ -134,8 +158,7 @@
                     <img src="2.png" alt="Nissan" class="md:h-16 h-12 logo">
                     <img src="3.png" alt="Great Wall" class="md:h-16 h-12 logo">
                     <img src="4.png" alt="BYD" class="md:h-16 h-12 logo">
-                    <img src="5.png" alt="Close Brothers"
-                        class="md:h-16 h-12 logo">
+                    <img src="5.png" alt="Close Brothers" class="md:h-16 h-12 logo">
                     <img src="6.png" alt="Doordash" class="md:h-16 h-12 logo">
                     <img src="7.png" alt="Peterbilt" class="md:h-16 h-12 logo">
                     <!-- Repeat logos for continuous scrolling -->
@@ -463,14 +486,14 @@
     <footer class="bg-gray-900 text-gray-300 py-8">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center md:space-y-0 w-full">
-    
+
                 <!-- Logo Section -->
                 <div class="flex items-center justify-center md:justify-start">
                     <img src="white_logo.png" alt="Company Logo" class="w-48"> <!-- Adjusted width -->
                 </div>
-    
-                
-    
+
+
+
                 <!-- Social Media Icons -->
                 <div class="flex space-x-4 justify-center mt-4 md:mt-0 md:mr-8">
                     <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
@@ -478,16 +501,23 @@
                     <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-    
+
             <!-- Copyright Text -->
             <div class="text-center mt-8">
                 <p class="text-sm">&copy; 2024 AspireSoft. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
     
-
-
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-x-full');
+        });
+    </script>
 </body>
 
 </html>
