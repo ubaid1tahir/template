@@ -55,33 +55,29 @@
 <body>
     <div class="relative">
         <!-- Navbar -->
-        <nav class="relative top-0 left-0 w-full z-10 bg-transparent pr-8">
+        <nav class="relative top-0 left-0 w-full z-50 bg-transparent pr-8">
             <div class="flex justify-between items-center">
                 <div class="logo">
                     <!-- Your Logo -->
                     <img src="white_logo.png" alt="Logo" class="md:w-72 w-48" />
                 </div>
-
+        
                 <!-- Hamburger Icon (Visible on Mobile) -->
                 <div class="md:hidden">
                     <button id="menu-toggle" class="text-white focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
-
+        
                 <!-- Desktop Menu -->
                 <ul class="hidden md:flex space-x-6 text-white font-semibold">
                     <li><a href="/" class="hover:text-primary cursor-pointer transition duration-300">Home</a></li>
-                    <li><a href="#about" class="hover:text-primary cursor-pointer transition duration-300">About</a>
-                    </li>
-                    <li><a href="#services"
-                            class="hover:text-primary cursor-pointer transition duration-300">Services</a></li>
-                    <li><a href="#portfolio"
-                            class="hover:text-primary cursor-pointer transition duration-300">Portfolio</a></li>
-                    <li><a href="#contact" class="hover:text-primary cursor-pointer transition duration-300">Contact</a>
-                    </li>
+                    <li><a href="#about" class="hover:text-primary cursor-pointer transition duration-300">About</a></li>
+                    <li><a href="#services" class="hover:text-primary cursor-pointer transition duration-300">Services</a></li>
+                    <li><a href="#portfolio" class="hover:text-primary cursor-pointer transition duration-300">Portfolio</a></li>
+                    <li><a href="#contact" class="hover:text-primary cursor-pointer transition duration-300">Contact</a></li>
                 </ul>
-
+        
                 <!-- Social Icons -->
                 <div class="md:space-x-4 space-x-2 hidden md:flex items-center pr-5">
                     <a href="#"><i class="fab fa-facebook text-white"></i></a>
@@ -89,10 +85,9 @@
                     <a href="#"><i class="fab fa-whatsapp text-white"></i></a>
                 </div>
             </div>
-
+        
             <!-- Mobile Sidebar Menu (Hidden by default) -->
-            <ul id="mobile-menu"
-                class="fixed inset-y-0 left-0 w-64 bg-gray-800 p-5 transform -translate-x-full transition-transform duration-300 md:hidden">
+            <ul id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-gray-800 p-5 transform -translate-x-full transition-transform duration-300 md:hidden">
                 <li class="mb-2"><a href="/" class="text-white hover:text-primary">Home</a></li>
                 <li class="mb-2"><a href="#about" class="text-white hover:text-primary">About</a></li>
                 <li class="mb-2"><a href="#services" class="text-white hover:text-primary">Services</a></li>
@@ -100,6 +95,9 @@
                 <li class="mb-2"><a href="#contact" class="text-white hover:text-primary">Contact</a></li>
             </ul>
         </nav>
+        
+        <!-- Background Overlay (Hidden by default) -->
+        <div id="overlay" class="fixed inset-0 bg-black opacity-50 z-0 hidden"></div>
 
         <!-- Background Video -->
         <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
@@ -513,9 +511,28 @@
     <script>
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('overlay');
     
+        // Toggle Sidebar and Overlay
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        });
+    
+        // Close Sidebar if clicked outside
+        overlay.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+        });
+    
+        // Close Sidebar when clicking anywhere outside the navbar (on mobile)
+        document.addEventListener('click', (event) => {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickInsideToggle = menuToggle.contains(event.target);
+            if (!isClickInsideMenu && !isClickInsideToggle) {
+                mobileMenu.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+            }
         });
     </script>
 </body>
