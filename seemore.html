@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap; 
+            position: relative;
+            width: 100%;
+            background: #f0f0f0;
+        }
+
+        .marquee-content {
+            display: flex;
+            align-items: center;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .logo {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            flex: 0 0 auto;
+        }
+
+        .logo-wrapper img {
+            margin-right: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="relative">
+        <!-- Navbar -->
+        <nav class="relative top-0 left-0 w-full z-50 bg-transparent pr-8">
+            <div class="flex justify-between items-center">
+                <div class="logo">
+                    <!-- Your Logo -->
+                    <img src="white_logo.png" alt="Logo" class="md:w-72 w-48" />
+                </div>
+        
+                <!-- Hamburger Icon (Visible on Mobile) -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+        
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-6 text-white font-semibold">
+                    <li><a href="index.html" class="hover:text-primary cursor-pointer transition duration-300">Home</a></li>
+                    <li><a href="index.html#about" class="hover:text-primary cursor-pointer transition duration-300">About</a></li>
+                    <li><a href="index.html#services" class="hover:text-primary cursor-pointer transition duration-300">Services</a></li>
+                    <li><a href="index.html#portfolio" class="hover:text-primary cursor-pointer transition duration-300">Portfolio</a></li>
+                    <li><a href="index.html#contact" class="hover:text-primary cursor-pointer transition duration-300">Contact</a></li>
+                </ul>
+        
+                <!-- Social Icons -->
+                <div class="md:space-x-4 space-x-2 hidden md:flex items-center pr-5">
+                    <a href="https://www.facebook.com/profile.php?id=61567765337404" target="_blank"><i class="fab fa-facebook text-white"></i></a>
+                    <a href="https://www.linkedin.com/in/muhammad-ubaid-a346ab276/" target="_blank"><i class="fab fa-linkedin text-white"></i></a>
+                    <a href="https://discord.com/channels/1283774048005914634/1283774048551305218" target="_blank"><i class="fab fa-discord text-white"></i></a>
+                </div>
+            </div>
+        
+            <!-- Mobile Sidebar Menu (Hidden by default) -->
+            <ul id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-gray-800 p-5 transform -translate-x-full transition-transform duration-300 md:hidden">
+                <li class="mb-2"><a href="index.html" class="text-white hover:text-primary">Home</a></li>
+                <li class="mb-2"><a href="index.html#about" class="text-white hover:text-primary">About</a></li>
+                <li class="mb-2"><a href="index.html#services" class="text-white hover:text-primary">Services</a></li>
+                <li class="mb-2"><a href="index.html#portfolio" class="text-white hover:text-primary">Portfolio</a></li>
+                <li class="mb-2"><a href="index.html#contact" class="text-white hover:text-primary">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Background Overlay (Hidden by default) -->
+        <div id="overlay" class="fixed inset-0 bg-black opacity-50 z-0 hidden"></div>
+
+        <!-- Background Video -->
+        <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <source src="banner222.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Overlay Text -->
+        <div
+            class="relative flex flex-col items-center md:justify-center pb-10 md:pt-0 mt-10 md:mt-0 md:h-screen text-center px-4">
+            <h1 class="text-3xl md:text-6xl font-bold text-white leading-tight">
+                Empowering 
+                <span class="text-blue-500">Your Digital Success.</span>
+            </h1>
+            <p class="text-md md:text-xl text-white mt-4">
+                Unlock the full potential of your business with our tailored development solutions. From frontend design to backend systems, we bring your ideas to life with innovative technology and expert craftsmanship.
+            </p>
+            <div class="mt-8 space-x-4">
+                <a href="https://www.upwork.com/freelancers/~017b0667dd9468e6ab" target="_blank" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition">Hire
+                    Us</a>
+                <a href="#services"
+                    class="border border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition">
+                    Our Services</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="services" class="text-center py-12">
+        <!-- Heading -->
+        <h2 class="text-blue-600 font-semibold">Our Expertise</h2>
+        <h1 class="text-xl md:text-4xl font-bold mt-2">
+            Tailored Solutions for Your Success
+        </h1>
+        <p class="text-lg md:text-2xl mt-1">
+            Choose the <span class="text-blue-600 font-semibold">Services</span> That Best Fit Your Needs
+        </p>
+    
+        <!-- Services Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 max-w-6xl mx-auto px-6 md:px-0">
+            <!-- Card 1 - Frontend Design -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-blue-500 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 18l6-6m0 0l-6-6m6 6H3" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Frontend Design</h3>
+                <p class="text-gray-600">
+                    Our design team brings your vision to life with beautiful, user-friendly interfaces. We focus on creating engaging experiences that keep users coming back.
+                </p>
+            </div>
+    
+            <!-- Card 2 - ASP.NET Core Development -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-green-600 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 18l6-6m0 0l-6-6m6 6H3" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold mb-2">ASP.NET Core Development</h3>
+                <p class="text-gray-600">
+                    We specialize in building robust, scalable applications using ASP.NET Core, tailored to meet your business goals with high performance and security.
+                </p>
+            </div>
+    
+            <!-- Card 3 - React Development -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-yellow-500 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 18l6-6m0 0l-6-6m6 6H3" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold mb-2">React Development</h3>
+                <p class="text-gray-600">
+                    Harness the power of React to build fast, interactive, and responsive web applications. Our developers deliver high-quality React solutions to enhance your digital presence.
+                </p>
+            </div>
+        </div>
+    
+        <!-- Additional Services Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 max-w-6xl mx-auto px-6 md:px-0">
+            <!-- Card 4 - JavaScript Expertise -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-blue-500 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 18l6-6m0 0l-6-6m6 6H3" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold mb-2">JavaScript Solutions</h3>
+                <p class="text-gray-600">
+                    Our JavaScript services deliver high-quality, cross-platform solutions for web and mobile, leveraging the latest frameworks and libraries to keep your applications cutting-edge.
+                </p>
+            </div>
+    
+            <!-- Card 5 - API Integration -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-green-600 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 18l6-6m0 0l-6-6m6 6H3" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold mb-2">API Integration</h3>
+                <p class="text-gray-600">
+                    Seamlessly integrate APIs to expand the capabilities of your app, whether connecting third-party services or developing custom APIs to support your unique needs.
+                </p>
+            </div>
+    
+            <!-- Card 6 - Full-Stack Development -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-yellow-500 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 18l6-6m0 0l-6-6m6 6H3" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Full-Stack Development</h3>
+                <p class="text-gray-600">
+                    From front to back, we provide complete development services that ensure seamless operation and integration, allowing your application to scale as your business grows.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center md:space-y-0 w-full">
+
+                <!-- Logo Section -->
+                <div class="flex items-center justify-center md:justify-start">
+                    <img src="white_logo.png" alt="Company Logo" class="w-48"> <!-- Adjusted width -->
+                </div>
+
+
+
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4 justify-center mt-4 md:mt-0 md:mr-8">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Copyright Text -->
+            <div class="text-center mt-8">
+                <p class="text-sm">&copy; 2024 AspireSoft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('overlay');
+    
+        // Toggle Sidebar and Overlay
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        });
+    
+        // Close Sidebar if clicked outside
+        overlay.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+        });
+    
+        // Close Sidebar when clicking anywhere outside the navbar (on mobile)
+        document.addEventListener('click', (event) => {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickInsideToggle = menuToggle.contains(event.target);
+            if (!isClickInsideMenu && !isClickInsideToggle) {
+                mobileMenu.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
